@@ -18,9 +18,12 @@ export const Requests = () => {
     return html
 }
 
-mainContainer.addEventListener("click", click => {
-    if (click.target.id.startsWith("request--")) {
-        const [,requestId] = click.target.id.split("--")
-        deleteRequest(parseInt(requestId))
+mainContainer.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id.startsWith("request--")) {
+            const [,requestId] = event.target.id.split("--")
+            deleteRequest(requestId)
+        }
     }
-})
+)

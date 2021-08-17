@@ -3,24 +3,24 @@ import { sendRequest } from "./dataAccess.js";
 export const ServiceForm = () => {
     let html = `
     <div class="field">
-        <label class="label" for="serviceParentName">Parent's Name</label>
-        <input type="text" name="serviceParentName" class="input" />
+        <label class="label" for="parentName">Parent's Name</label>
+        <input type="text" name="parentName" class="input" />
     </div>
     <div class="field">
-        <label class="label" for="serviceChildName">Child's Name</label>
-        <input type="text" name="serviceChildName" class="input" />
+        <label class="label" for="childName">Child's Name</label>
+        <input type="text" name="childName" class="input" />
     </div>
     <div class="field">
-        <label class="label" for="serviceAddress">Address of Home</label>
-        <input type="text" name="serviceAddress" class="input" />
+        <label class="label" for="address">Address of Home</label>
+        <input type="text" name="address" class="input" />
     </div>
     <div class="field">
-        <label class="label" for="serviceReservationDate">Date of Reservation</label>
-        <input type="date" name="serviceReservationDate" class="input" />
+        <label class="label" for="reservationDate">Date of Reservation</label>
+        <input type="date" name="reservationDate" class="input" />
     </div>
     <div class="field">
-        <label class="label" for="serviceLength">Length in Hours</label>
-        <input type="number" name="serviceLength" class="input" />
+        <label class="label" for="length">Length in Hours</label>
+        <input type="number" name="length" class="input" />
     </div>
 
     <button class="button" id="submitRequest">Submit Request</button>
