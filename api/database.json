@@ -1,15 +1,5 @@
 {
   "clowns": [],
   "completions": [],
-  "requests": [
-    {
-      "id": 1,
-      "parentName": "Alicia",
-      "childName": "Henry Monster",
-      "numberOfChildren": 2,
-      "addressOfHome": "423 Street Way",
-      "reservationDate": "May 4, 2021",
-      "lengthOfReservation": 2
-    }
-  ]
+  "requests": []
 }

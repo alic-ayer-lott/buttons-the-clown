@@ -1,4 +1,4 @@
-import { getRequests } from "./dataAccess.js";
+import { getRequests, deleteRequest } from "./dataAccess.js";
 
 const mainContainer = document.querySelector("#container")
 
@@ -9,7 +9,12 @@ export const Requests = () => {
         <ul>
             ${
                 requests.map((request)=> {
-                return `<li>Party for ${request.childName} booked by ${request.parentName} on ${request.reservationDate}.</li>`})
+                return `<li>Party for ${request.childName} booked by ${request.parentName} on ${request.reservationDate}.
+                <button class"request__delete"
+                    id="request--${request.id}">
+                DENY
+                </button>
+                </li>`})
                 .join("")
             }
         </ul>
@@ -18,12 +23,9 @@ export const Requests = () => {
     return html
 }
 
-mainContainer.addEventListener(
-    "click",
-    (event) => {
-        if (event.target.id.startsWith("request--")) {
-            const [,requestId] = event.target.id.split("--")
-            deleteRequest(requestId)
-        }
+mainContainer.addEventListener("click", click => {
+    if (click.target.id.startsWith("request--")) {
+        const [,requestId] = click.target.id.split("--")
+        deleteRequest(parseInt(requestId))
     }
-)
+})
