@@ -9,7 +9,7 @@ export const Requests = () => {
         <ul>
             ${
                 requests.map((request)=> {
-                return `<li>${request}</li>`})
+                return `<li>Party for ${request.childName} booked by ${request.parentName} on ${request.reservationDate}.</li>`})
                 .join("")
             }
         </ul>

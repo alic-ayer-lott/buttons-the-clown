@@ -31,20 +31,21 @@ export const ServiceForm = () => {
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", clickEvent => {
-    const userParentName = document.querySelector("input[name='serviceParentName']").value
-    const userChildName = document.querySelector("input[name='serviceChildName']").value
-    const userAddress = document.querySelector("input[name='serviceAddress']").value
-    const userReservationDate = document.querySelector("input[name='serviceReservationDate']").value
-    const userLength = document.querySelector("input[name='serviceLength']").value
+    if (clickEvent.target.id === "submitRequest") {
+        const userParentName = document.querySelector("input[name='parentName']").value
+        const userChildName = document.querySelector("input[name='childName']").value
+        const userAddress = document.querySelector("input[name='address']").value
+        const userReservationDate = document.querySelector("input[name='reservationDate']").value
+        const userLength = document.querySelector("input[name='length']").value
 
-    const dataToSendToAPI = {
-        parentName: userParentName,
-        childName: userChildName,
-        address: userAddress,
-        reservationDate: userReservationDate,
-        length: userLength
+        const dataToSendToAPI = {
+            parentName: userParentName,
+            childName: userChildName,
+            address: userAddress,
+            reservationDate: userReservationDate,
+            length: userLength
+        }
+
+        sendRequest(dataToSendToAPI)
     }
-
-    sendRequest(dataToSendToAPI)
-    
 })
