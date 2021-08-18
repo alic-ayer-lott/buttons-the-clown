@@ -1,0 +1,15 @@
+.field{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
+    background-color: #edf6f9;
+    color: #cbc0d3;
+    font-size: 1rem;
+    font-weight: bolder;
+    display: flex;
+    border-color: #cbc0d3;
+}

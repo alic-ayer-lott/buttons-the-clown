@@ -32,6 +32,7 @@ export const ServiceForm = () => {
     return html
 }
 
+
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", clickEvent => {
