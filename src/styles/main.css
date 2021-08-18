@@ -1,0 +1,12 @@
+@import "details.css";
+
+body {
+    background-color: #edf6f9;
+}
+body,
+textarea {
+	color: #006d77;
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
+	font-size: 16px;
+	line-height: 1.5;
+}
