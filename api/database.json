@@ -1,5 +1,24 @@
 {
   "clowns": [],
   "completions": [],
-  "requests": []
+  "requests": [
+    {
+      "parentName": "Alicia",
+      "childName": "Henry",
+      "numberOfChildren": "2",
+      "address": "568 Way Street",
+      "reservationDate": "2021-08-21",
+      "length": "2",
+      "id": 1
+    },
+    {
+      "parentName": "Dylan",
+      "childName": "Henry Monster",
+      "numberOfChildren": "5",
+      "address": "894 Your Street",
+      "reservationDate": "2021-09-01",
+      "length": "4",
+      "id": 2
+    }
+  ]
 }

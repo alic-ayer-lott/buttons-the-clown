@@ -1,17 +1,17 @@
 const applicationState = {
-    requests: []
+    requests: [] //12. store the data referenced by serviceRequests
 }
 
-const API = "http://localhost:8088"
+const API = "http://localhost:8088" // 7. see that API references a URL and can go to get API online
 const mainContainer = document.querySelector("#container")
 
 
-export const fetchRequests = () => {
-    return fetch(`${API}/requests`)
-    .then(response => response.json())
+export const fetchRequests = () => { //5. defines fetchRequests function; get JSON data from API and turn into JS
+    return fetch(`${API}/requests`) //6. go to this website and go to the section where there are requests 8. we are not fetching the requests data section of APIs website
+    .then(response => response.json()) //9. taking the response of the promise{} made in step 6; translating into JavaScript language we can use
     .then(
-        (serviceRequests) => {
-            applicationState.requests = serviceRequests
+        (serviceRequests) => { //10. taking the data that is now in JS translation and naming it to be serviceRequests
+            applicationState.requests = serviceRequests //11. take the external state referenced by 'serviceRequests' and store in empty requests array
         }
     )
 }
